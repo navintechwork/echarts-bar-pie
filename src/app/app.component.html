@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" routerLink="">Angular ECharts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" [class.show]="isCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Charts</a>
+        </li>
+      </ul>
+      <div style="margin-left: 50%">
+        <form class="form-inline mt-2 mt-md-0" style="display: flex;">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 30px;">Search</button>
+        </form>
+      </div>
+      
+    </div>
+</nav>
+
+<main role="main" class="container" style="margin-top: 100px;">
+	<div class="row row-style">
+        <div class="col-md-6">
+            <div class="card">
+                <div echarts [options]="optionOne" class="demo-chart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div echarts [options]="optionFour" class="demo-chart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-style">
+        <div class="col-md-6">
+            <div class="card">
+                <div echarts [options]="optionTwo" class="demo-chart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div echarts [options]="optionFive" class="demo-chart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-style">
+        <div class="col-md-6">
+            <div class="card">
+                <div echarts [options]="optionThree" class="demo-chart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div echarts [options]="optionSix" class="demo-chart"></div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+<footer class="footer">
+    <div class="container">
+      <span class="text-muted">Angular Echarts &#169; 2023</span>
+    </div>
+  </footer>
+
+<!-- <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button> -->
